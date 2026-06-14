@@ -1,0 +1,130 @@
+/* Definição de variáveis de cor (Paleta de cores voltada ao solo e natureza) */
+:root {
+    --bg-color: #f7f5f0;          /* Bege bem claro (lembra terra arenosa clara) */
+    --text-color: #3e2723;        /* Marrom escuro (café/terra úmida) para alto contraste */
+    --primary-color: #8d6e63;     /* Marrom argila */
+    --accent-color: #2e7d32;      /* Verde folha/plantio */
+    --card-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1c1412;          /* Marrom quase preto */
+    --text-color: #f5efe6;        /* Texto claro */
+    --primary-color: #d7ccc8;     /* Detalhes em marrom claro */
+    --accent-color: #81c784;      /* Verde claro para destacar no escuro */
+    --card-bg: #2d1f1c;
+}
+
+/* Estilos Gerais e Fontes */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+    padding-bottom: 60px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem 2rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Botão de Alternar Modo (Acessível) */
+#toggle-theme {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.1s;
+}
+
+#toggle-theme:hover {
+    filter: brightness(1.1);
+}
+
+#toggle-theme:focus {
+    outline: 3px solid var(--text-color);
+}
+
+/* Conteúdo Principal */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.content-section {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+}
+
+/* Imagem Média e Referência */
+.image-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.mid-image {
+    max-width: 100%;
+    height: auto;
+    width: 550px; /* Aumentei um pouquinho a largura para destacar bem a roça */
+    border-radius: 6px;
+    border: 3px solid var(--primary-color);
+    object-fit: cover;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+figcaption a {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
